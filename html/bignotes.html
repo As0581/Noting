@@ -7,15 +7,31 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/bignotes.css">
-    <script defer src="js/app.js"></script>
+    <link rel="stylesheet" href="../css/bignotes.css">
+    <script defer src="../js/bignotes.js"></script>
     <title>NoTings</title>
 </head>
 <body>
+    <aside class="other-notes">
+        You can
+    </aside>
     <div class="container">
         <div class="bignote-inner">
-            
+            <h1  id="bignote-title">Название</h1>
+            <input class="hidden" id="bignote-input-title" placeholder="Название" type="text">
+            <p id="bignote-text">Текст</p>
+            <textarea class="hidden" placeholder="Текст" name="" id="bignote-input-text"></textarea>
+            <div class="bignote-canvas"></div>
+            <div class="bignote-file"></div>
         </div>
     </div>
+    <aside class="options-bar">
+        <div class="options-inner">
+            <button class="options__btn"id="draw">draw</button>
+            <button class="options__btn"id="Add File">Add File</button>
+            <button class="options__btn"id="edit">Edit Text / save Text</button>
+            <button class="options__btn" id="save">Save Note</button>
+        </div>
+    </aside>
 </body>
 </html>

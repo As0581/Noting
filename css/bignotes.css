@@ -1,0 +1,73 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    background-color: #f1f5f8;
+    font-family: 'Open Sans' , sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.container{
+    margin:0 auto;
+    max-width:1260px;
+    display: flex;
+    height:100vh;
+    width:100%;
+}
+
+.bignote-inner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    margin:30px 0 70px 0;
+    border-radius:25px;
+    background-color: #6ba5d1;
+    box-shadow: 0px 15px 50px 13px #4d718d;
+    padding:20px
+}
+
+#bignote-input-text,#bignote-input-title{
+    color:#2a3233;
+    font-size:40px;
+    font-weight: 600;
+    border:none;
+    outline:none;
+    background-color: transparent;
+}
+
+
+
+#bignote-text,#bignote-input-text{
+    padding:15px;
+    font-weight: 800;
+    background-color: transparent;
+    border:none;
+    resize :none;
+    outline: none;
+    width:100%;
+    height: 100%;
+    font-size:20px
+}
+
+#bignote-title{
+    font-size: 50px;
+}
+#bignote-text{
+    font-size: 20px;
+}
+
+#bignote-input-title::placeholder,#bignote-input-text::placeholder{
+    color:#f1f5f8a8;
+    
+    
+    font-weight: 500;
+}   
+
+.hidden{
+    display: none;
+}
