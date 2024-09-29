@@ -1,5 +1,5 @@
 const notesElement = document.querySelector('.notes')
-const addBtn = document.querySelector('.note-add__btn')
+const addBtn = document.querySelector('.note-fastAdd__btn')
 
 let noteIndex = 0
 const notes = []
