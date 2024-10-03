@@ -12,7 +12,7 @@ body{
 }
 
 .container{
-    margin:0 auto;
+    margin:0 100px 0 auto ;
     max-width:1260px;
     display: flex;
     height:100vh;
@@ -71,3 +71,37 @@ body{
 .hidden{
     display: none;
 }
+
+.options-bar{
+    display: flex;
+    flex-direction: column  ;
+    gap:10px;
+    padding-top:30px;
+    width:100%;
+    max-width: 200px;
+    background-color: #90b8d6;
+    align-items: center;
+    box-shadow:0px 6px 25px 2px #4d718d;
+}
+
+
+.options__btn{ 
+    margin-bottom: 10px;
+    background-color: #367baf;
+    border: none;
+    padding:10px;
+    border-radius: 10px;
+    box-shadow:0px 6px 25px 2px #4d718d;
+    transition: all 1s;
+}
+.options__btn:hover{
+    transition: all 0.5s;
+    background-color: #2c5e85;
+    padding:20px
+}
+.options__btn:active{
+    transition: all 0.5s;
+    background-color: #143147;
+    padding:15px
+}
+

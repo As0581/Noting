@@ -13,7 +13,7 @@
 </head>
 <body>
     <aside class="other-notes">
-        You can
+        <a href="../index.html" class="main-link">NoTings</a>
     </aside>
     <div class="container">
         <div class="bignote-inner">
@@ -21,17 +21,25 @@
             <input class="hidden" id="bignote-input-title" placeholder="Название" type="text">
             <p id="bignote-text">Текст</p>
             <textarea class="hidden" placeholder="Текст" name="" id="bignote-input-text"></textarea>
-            <div class="bignote-canvas"></div>
+            <div class="bignote-canvas hidden">
+                <canvas style="border: 1px solid black"></canvas>
+                <div class="canvas-options" style="display: flex; justify-content: space-between; width: 300px">
+                    <input type="color">
+                    <input type="range" min="1" max="20" step="1" value="1">
+                    <button type="button" id="clear">Clear</button>
+                </div>
+            </div>
             <div class="bignote-file"></div>
         </div>
     </div>
     <aside class="options-bar">
-        <div class="options-inner">
-            <button class="options__btn"id="draw">draw</button>
+            <button class="options__btn"id="draw">Draw / delete drawing</button>
+            <label class="hidden" for="input">width of drawing</label>
+            <input value="400" class="hidden" type="number" id="drawing-width">
             <button class="options__btn"id="Add File">Add File</button>
             <button class="options__btn"id="edit">Edit Text / save Text</button>
             <button class="options__btn" id="save">Save Note</button>
-        </div>
+
     </aside>
 </body>
 </html>
