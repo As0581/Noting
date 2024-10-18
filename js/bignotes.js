@@ -3,8 +3,10 @@
 
 const titleElement = document.querySelector('#bignote-title')
 const textElement = document.querySelector('#bignote-text')
-const inputTitleElement = document.querySelector('#bignote-input-title')
+let inputTitleElement = document.querySelector('#bignote-input-title')
 const inputTextElement = document.querySelector('#bignote-input-text')
+
+inputTitleElement.placeholder = 'Без названия'
 
 const editBtn = document.querySelector('#edit')
 
@@ -13,7 +15,6 @@ function toggle(){
     textElement.classList.toggle('hidden')
     inputTitleElement.classList.toggle('hidden')
     inputTextElement.classList.toggle('hidden')
-    
 }
 
 textElement.addEventListener('click' , ()=>{
@@ -43,19 +44,31 @@ const drawBtn = document.querySelector('#draw')
 const note = document.querySelector('.bignote-inner')
 const drawing = document.querySelector('.bignote-canvas')
 const drawingWidth = document.querySelector('#drawing-width')
+const drawingHeight = document.querySelector('#drawing-height')
 const canvasOptions = document.querySelector('.canvas-options')
-const canvasLabel = document.querySelector('label')
+const canvasWidthLabel = document.querySelector('label')
+const canvasHeightLabel = document.querySelector('#draw-height')
+
 
 
 drawBtn.addEventListener('click' , ()=>{
     drawing.classList.toggle('hidden')
     drawingWidth.classList.toggle('hidden')
-    canvasLabel.classList.toggle('hidden')
+    drawingHeight.classList.toggle('hidden')
+    canvasWidthLabel.classList.toggle('hidden')
+    canvasHeightLabel.classList.toggle('hidden')
+    
 })
 
 drawingWidth.addEventListener('change', ()=>{
     canvas.width = drawingWidth.value
     canvasOptions.style.width = drawingWidth.value + 'px'
+    ctx.lineCap = 'round';
+})
+
+drawingHeight.addEventListener('change',()=>{
+  canvas.height = drawingHeight.value
+  ctx.lineCap = 'round';  
 })
 
 const canvas = document.querySelector('canvas');
@@ -118,6 +131,33 @@ function changeLineWidth(event) {
 }
 
 function clearCanvas() {
-  ctx.clearRect(0, 0, w, h);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
 
+
+// Add file 
+
+const addFileBtn = document.querySelector('#Add-File')
+const fileInput = document.querySelector('#file-input')
+addFileBtn.addEventListener('click' , ()=>{
+  fileInput.classList.toggle('hidden')
+})
+
+//save note
+
+const saveNoteBtn = document.querySelector('#save')
+const notesList = document.querySelector('.notes-list')
+
+saveNoteBtn.addEventListener('click', ()=>{
+  const notesItem = document.createElement('li')
+  notesItem.classList.add('notes-list__item')
+  if(inputTitleElement.value.length === 0){
+    notesItem.innerText = inputTitleElement.placeholder
+  }else{
+    notesItem.innerText = inputTitleElement.value
+  }
+  
+  notesList.appendChild(notesItem)
+})
+
+console.log(inputTitleElement.value);

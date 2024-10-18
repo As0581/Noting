@@ -14,29 +14,36 @@
 <body>
     <aside class="other-notes">
         <a href="../index.html" class="main-link">NoTings</a>
+        <ul class="notes-list">
+           
+        </ul>
     </aside>
     <div class="container">
         <div class="bignote-inner">
             <h1  id="bignote-title">Название</h1>
-            <input class="hidden" id="bignote-input-title" placeholder="Название" type="text">
-            <p id="bignote-text">Текст</p>
+            <input  class="hidden" id="bignote-input-title" placeholder="Название" type="text">
+            <textarea readonly id="bignote-text">Текст</textarea>
             <textarea class="hidden" placeholder="Текст" name="" id="bignote-input-text"></textarea>
             <div class="bignote-canvas hidden">
                 <canvas style="border: 1px solid black"></canvas>
                 <div class="canvas-options" style="display: flex; justify-content: space-between; width: 300px">
                     <input type="color">
-                    <input type="range" min="1" max="20" step="1" value="1">
-                    <button type="button" id="clear">Clear</button>
+                    <input type="range" min="1" max="30" step="1" value="1">
+                    <button type="button" id="clear">to Clear</button>
                 </div>
             </div>
-            <div class="bignote-file"></div>
+            <div class="bignote-file">
+                <input class="hidden" type="file" name="" id="file-input">
+            </div>
         </div>
     </div>
     <aside class="options-bar">
-            <button class="options__btn"id="draw">Draw / delete drawing</button>
-            <label class="hidden" for="input">width of drawing</label>
-            <input value="400" class="hidden" type="number" id="drawing-width">
-            <button class="options__btn"id="Add File">Add File</button>
+            <button class="options__btn"id="draw">Draw/<br>  delete drawing</button>
+            <label class="hidden" for="input">width  of drawing</label>
+            <input value="200" min="200" step="10" max="1200" class="hidden" type="range" id="drawing-width" >
+            <label id="draw-height" class="hidden" for="input">height of drawing</label>
+            <input value="200" min="200" step="10" max="300" class="hidden" type="range" id="drawing-height" >
+            <button class="options__btn"id="Add-File">Add / remove File</button>
             <button class="options__btn"id="edit">Edit Text / save Text</button>
             <button class="options__btn" id="save">Save Note</button>
 
