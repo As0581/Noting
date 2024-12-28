@@ -135,3 +135,13 @@ nav{
 #note-text-input:focus{
     border:none;
 }
+
+@media (max-width:750px) {
+    .container{
+        max-width: 650px;
+    }
+    .header{
+        flex-wrap: wrap;
+        z-index: 1;
+    }
+}
